@@ -8,16 +8,110 @@ import thumbnail5 from '../../assets/thumbnail5.png'
 import thumbnail6 from '../../assets/thumbnail6.png'
 import thumbnail7 from '../../assets/thumbnail7.png'
 import thumbnail8 from '../../assets/thumbnail8.png'
+import { Link } from 'react-router-dom'
 
 
 const Feed = () => {
     return (
-        <div className="card">
-            <img src={thumbnail1} alt="" />
-            <h2>Best channel to learn coding to help you become a software developer</h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bulll; 2 days ago </p>
-        </div>
+        <Link to={`video/20/4521`} className="feed">
+            <div className="card">
+                <img src={thumbnail1} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail2} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail3} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail4} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail5} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail6} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail7} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail8} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail1} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail2} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail3} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail4} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail5} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail6} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail7} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+            <div className="card">
+                <img src={thumbnail8} alt="" />
+                <h2>Best channel to learn coding to help you become a software developer</h2>
+                <h3>Greatstack</h3>
+                <p>15k views &bulll; 2 days ago </p>
+            </div>
+        </Link>
+       
     )
 }
 
