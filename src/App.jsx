@@ -1,5 +1,8 @@
 import React from 'react'
 import Navbar from './Components/Navbar/Navbar'
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import Video from './Pages/Video/Video';
 
 const App = () => {
   return (
@@ -8,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/video/:catagoryId/:videoId' element={<Video />} />
-        
+
       </Routes>
     </div>
   )
