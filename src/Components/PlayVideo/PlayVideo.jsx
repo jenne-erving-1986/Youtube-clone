@@ -10,10 +10,11 @@ import user_profile from '../../assets/user_profile.jpg'
 
 
 
-const PlayVideo = () => {
+const PlayVideo = ({videoId}) => {
 	return (
         <div className="play-video">
-            <video src={video} controls autoPlay muted></video>
+            {/*<video src={video} controls autoPlay muted></video>*/}
+            <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <h3>Best VidTube Channel to Learn Web Development</h3>
             <div className="play-video-info">
                 <p>1525 Views &bull; 2 days ago</p>
