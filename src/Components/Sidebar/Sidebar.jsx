@@ -33,7 +33,7 @@ const Sidebar = ({sidebar, category, setCategory}) => {
                 <div className={`side-link ${category === 17 ? "active" : ""}`} onClick={() => setCategory(17)}>
                     <img src={sports} alt="" /><p>Sports</p>
                 </div>
-                <div className={`side-link${category === 24 ? "active" : ""} `} onClick={() => setCategory(24)}>
+                <div className={`side-link ${category === 24 ? "active" : ""}`} onClick={() => setCategory(24)}>
                     <img src={entertainment} alt="" /><p>Entertainment</p>
                 </div>
                 <div className={`side-link ${category === 28 ? "active" : ""}`} onClick={() => setCategory(28)}>
