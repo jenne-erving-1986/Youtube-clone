@@ -34,8 +34,8 @@ useEffect(() => {
             <Link to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
                 <img src={item.snippet.thumbnails.medium.url} alt="" />
                 <h2>{item.snippet.title}</h2>
-                <h3>{item.snippet.chanelTitle}</h3>
-                <p>15k views &bulll; 2 days ago </p>
+                <h3>{item.snippet.channelTitle}</h3>
+                <p>{value_converter(item.statistics.viewCount)} views &bulll; 2 days ago </p>
             </Link>
                 )
             })}
