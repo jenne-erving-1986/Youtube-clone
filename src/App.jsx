@@ -13,7 +13,7 @@ const [sidebar, setSidebar] = useState(true);
       <Navbar setSidebar={setSidebar} />
       <Routes>
         <Route path='/' element={<Home sidebar={sidebar} />} />
-        <Route path='/video/:catagoryId/:videoId' element={<Video />} />
+        <Route path='/video/:categoryId/:videoId' element={<Video />} />
 
       </Routes>
     </div>
@@ -21,3 +21,4 @@ const [sidebar, setSidebar] = useState(true);
 }
 
 export default App
+
