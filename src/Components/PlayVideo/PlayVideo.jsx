@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './PlayVideo.css'
 import video from '../../assets/video.mp4'
 import like from '../../assets/like.png'
@@ -7,15 +7,30 @@ import share from '../../assets/share.png'
 import save from '../../assets/save.png'
 import jack from '../../assets/jack.png'
 import user_profile from '../../assets/user_profile.jpg'
+import { API_KEY } from '../../Data';
 
 
 
 const PlayVideo = ({videoId}) => {
+
+    const [apiData, setApiData] = useState(null);
+
+    const fetchVideoData = async () => {
+        //fetching videos data
+        const videoDetails_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`;
+        await fetch(videoDetails_url).then(res => res.json()).then(data => setApiData(data.items[0]));
+
+    }
+
+    useEffect(() => {
+        fetchVideoData();
+    }, [])
+
 	return (
         <div className="play-video">
             {/*<video src={video} controls autoPlay muted></video>*/}
-            <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h3>Best VidTube Channel to Learn Web Development</h3>
+            <iframe title="YouTube video player" src={`https://www.youtube.com/embed/${videoId}`} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <h3>{apiData ? apiData.snippet.title:"Title Here"}</h3>
             <div className="play-video-info">
                 <p>1525 Views &bull; 2 days ago</p>
                 <div>
