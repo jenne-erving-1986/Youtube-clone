@@ -32,7 +32,7 @@ const PlayVideo = ({videoId}) => {
             <iframe title="YouTube video player" src={`https://www.youtube.com/embed/${videoId}`} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             <h3>{apiData ? apiData.snippet.title:"Title Here"}</h3>
             <div className="play-video-info">
-                <p>1525 Views &bull; 2 days ago</p>
+                <p>{apiData ? value_converter(apiData.statistics.viewCount):"16k"} &bull; 2 days ago</p>
                 <div>
                     <span><img src={like} alt="" />125</span>
                     <span><img src={dislike} alt="" />2</span>
