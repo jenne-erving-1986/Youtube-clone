@@ -30,7 +30,7 @@ const PlayVideo = ({videoId}) => {
         const channelData_url = `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${apiData.snippet.channelId}&key=${API_KEY}`
         await fetch(channelData_url).then(res => res.json()).then(data => setChannelData(data.items[0]))
         //fetching comment data
-        const comment_url = `GET https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&videoId=${videoId}&key=${API_KEY}`;
+        const comment_url = `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&maxReults=50&videoId=${videoId}&key=${API_KEY}`;
         await fetch(comment_url).then(res => res.json()).then(data => setCommentData(data.items))
     }
 
@@ -43,6 +43,7 @@ const PlayVideo = ({videoId}) => {
     }, [apiData])
 
 	return (
+        
         <div className="play-video">
             {/*<video src={video} controls autoPlay muted></video>*/}
             <iframe title="YouTube video player" src={`https://www.youtube.com/embed/${videoId}`} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
@@ -75,21 +76,20 @@ const PlayVideo = ({videoId}) => {
                         <div key={index} className="comment">
                             <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="" /> 
                         <div>
-                            <h3>Jack Nicholson <span>1 day ago</span></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, facere mollitia, doloremque nobis maxime assumenda harum excepturi incidunt impedit sapiente modi nostrum aperiam! Quidem possimus minima repellendus praesentium labore maxime?</p>
-                        <div className="comment-action">
+                            <h3>{item.snippet.topLevelComment.snippet.authorDisplayName} <span>1 day ago</span></h3>
+                            <p>{item.snippet.topLevelComment.snippet.textDisplay}</p>
                             <img src={like} alt="" />
-                            <span>244</span>
+                            <span>{value_converter(item.snippet.topLevelComment.snippet.likeCount)}</span>
                             <img src={dislike} alt="" />
                         </div>
-                    </div>
+                    
                 </div>
                     )
                 })}
                 
             </div>
         </div>
-    )  
+    )   
 };
 
 export default PlayVideo;
